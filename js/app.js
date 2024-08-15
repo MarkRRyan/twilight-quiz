@@ -130,7 +130,9 @@ const tspInfo = [
 // containers for storing data (const, let)
 
 // src (optional): The URL of the audio file to load.
-const audio = new Audio('../audio/bellas_lullaby.mp3');
+// const audio = new Audio('../audio/bellas_lullaby.mp3');
+const audio = new Audio('./audio/bellas_lullaby.mp3');
+
 audio.volume = 0.2;
 audio.loop = false;
 
@@ -261,24 +263,10 @@ tsp.addEventListener("click", () => {
           checkGameOver1()
      }
 })
+
 document.getElementById('playButton').addEventListener('click', () => {
      audio.play()
 })
 document.getElementById('pauseButton').addEventListener('click', () => {
      audio.pause()
 })
-
-// Add the following code to handle audio playback on GitHub Pages
-document.addEventListener('DOMContentLoaded', () => {
-     const audioElement = document.querySelector('audio');
-     const playButton = document.getElementById('playButton');
-     const pauseButton = document.getElementById('pauseButton');
-
-     playButton.addEventListener('click', () => {
-          audioElement.play();
-     });
-
-     pauseButton.addEventListener('click', () => {
-          audioElement.pause();
-     });
-});
