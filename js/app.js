@@ -263,11 +263,18 @@ tsp.addEventListener("click", () => {
 })
 
 document.getElementById('playButton').addEventListener('click', () => {
-     audio.play().catch((error) => {
-          console.error('Error playing audio:', error);
-     });
-});
-
+     audio.play()
+})
 document.getElementById('pauseButton').addEventListener('click', () => {
-     audio.pause();
-});
+     audio.pause()
+})
+
+// document.getElementById('playButton').addEventListener('click', () => {
+//      audio.play().catch((error) => {
+//           console.error('Error playing audio:', error);
+//      });
+// });
+
+// document.getElementById('pauseButton').addEventListener('click', () => {
+//      audio.pause();
+// });
