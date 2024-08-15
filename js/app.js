@@ -131,7 +131,7 @@ const tspInfo = [
 
 // src (optional): The URL of the audio file to load.
 // const audio = new Audio('../audio/bellas_lullaby.mp3');
-const audio = new Audio('./audio/bellas_lullaby.mp3');
+const audio = new Audio('./bellas_lullaby.mp3');
 
 audio.volume = 0.2;
 audio.loop = false;
