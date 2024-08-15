@@ -261,10 +261,24 @@ tsp.addEventListener("click", () => {
           checkGameOver1()
      }
 })
-
 document.getElementById('playButton').addEventListener('click', () => {
      audio.play()
 })
 document.getElementById('pauseButton').addEventListener('click', () => {
      audio.pause()
 })
+
+// Add the following code to handle audio playback on GitHub Pages
+document.addEventListener('DOMContentLoaded', () => {
+     const audioElement = document.querySelector('audio');
+     const playButton = document.getElementById('playButton');
+     const pauseButton = document.getElementById('pauseButton');
+
+     playButton.addEventListener('click', () => {
+          audioElement.play();
+     });
+
+     pauseButton.addEventListener('click', () => {
+          audioElement.pause();
+     });
+});
