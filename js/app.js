@@ -130,7 +130,7 @@ const tspInfo = [
 // containers for storing data (const, let)
 
 // src (optional): The URL of the audio file to load.
-const audio = new Audio('bellas_lullaby.mp3');
+const audio = new Audio('./bellas_lullaby.mp3');
 audio.volume = 0.2;
 audio.loop = false;
 
@@ -263,8 +263,11 @@ tsp.addEventListener("click", () => {
 })
 
 document.getElementById('playButton').addEventListener('click', () => {
-     audio.play()
-})
+     audio.play().catch((error) => {
+          console.error('Error playing audio:', error);
+     });
+});
+
 document.getElementById('pauseButton').addEventListener('click', () => {
-     audio.pause()
-})
+     audio.pause();
+});
